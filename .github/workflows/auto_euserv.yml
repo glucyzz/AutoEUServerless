@@ -11,16 +11,17 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2.4.3
+      uses: actions/checkout@v2.4.3  # 更新到最新版本
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v4  # 或更高版本，以确保使用 Node.js 16.x
       with:
-        python-version: '3.x'  # 指定Python3.x
+        node-version: 16
 
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4
+        npm install -g yarn  # 或其他包管理工具
+        yarn install  # 或其他安装命令
 
     - name: Run script
       env:
