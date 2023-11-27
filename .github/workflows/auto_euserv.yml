@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2.4.3  # 更新到最新版本
+      uses: actions/checkout@v2
 
     - name: Set up Node.js
       uses: actions/setup-node@v4  # 或更高版本，以确保使用 Node.js 16.x
